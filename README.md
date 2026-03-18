@@ -25,13 +25,13 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose: To guess a randomly generated secret number within a limited amount of attempts, utilizing higher/lower hints.
+- [x] Detail which bugs you found: 1) The 'secret' was stringified on even attempts causing hints to break. 2) The score inexplicably increased by 5 points for a wrong guess on an even attempt. 3) The hint messages were contradictory (e.g., Too High outputted "📈 Go HIGHER!").
+- [x] Explain what fixes you applied: Refactored the game logic into `logic_utils.py` to be tested independently. Removed the stringification bug in `app.py`. Corrected the `update_score` mathematics to consistently subtract 5 for a wrong answer. Swapped the "HIGHER" and "LOWER" string values in `check_guess`.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [x] Demo completed and verified via Streamlit and Pytest locally. The repository is functioning correctly.
 
 ## 🚀 Stretch Features
 
